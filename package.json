@@ -1,0 +1,46 @@
+{
+  "name": "react-lcars",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf dist && cross-env BABEL_ENV=default NODE_ENV=production webpack  --env production --mode production",
+    "dev": "cross-env BABEL_ENV=default webpack --mode development --env development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techlemur/react-lcars.git"
+  },
+  "keywords": [
+    "lcars",
+    "react"
+  ],
+  "author": "Techlemur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/techlemur/react-lcars/issues"
+  },
+  "homepage": "https://github.com/techlemur/react-lcars#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/plugin-transform-arrow-functions": "^7.14.5",
+    "@babel/plugin-transform-react-jsx": "^7.14.9",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.14.8",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.27.5",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.36.0",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.47.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-log": "^3.0.2"
+  }
+}

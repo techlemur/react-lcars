@@ -1,0 +1,62 @@
+/* ::noauto:: */
+
+@import 'vars';
+
+
+.lc{
+	&.button{
+		font-family:$mainFont;
+		display:inline-block;
+		position:relative;
+		color:$baseText;
+		background-color:$base;
+		min-width:50px;
+		vertical-align: text-bottom;
+		vertical-align: bottom;
+		padding:20px 5px;
+		margin:$elementPadding ($bCapWidth + $bCapPadding + $elementPadding);
+		text-align:right;
+		div{
+			opacity:0;
+		}
+		span{
+			//display: block;
+			// vertical-align: 0%;
+			position:absolute;
+			bottom:$bContentPadding;
+			right:$bContentPadding;
+		}
+		&:after{
+			content:"";
+			position:absolute;
+			width:$bCapWidth;
+			height:100%;
+			right:-($bCapWidth + $bCapPadding);
+			top:0;
+			background-color:$base;
+			border-radius: 0 50% 50% 0;
+		}
+		&:before{
+			content:"";
+			position:absolute;
+			width:$bCapWidth;
+			height:100%;
+			left:-($bCapWidth + $bCapPadding);
+			top:0;
+			background-color:$base;
+			border-radius: 50% 0 0 50%;
+		}
+		&.medical{
+			background-color:$medical;
+			&:after,&:before{
+				background-color:$medical;
+			}
+		}
+		&.alert{
+			background-color:$alert;
+			&:after,&:before{
+				background-color:$alert;
+			}
+		}
+	}
+}
